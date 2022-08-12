@@ -29,6 +29,8 @@ h1{
     transform: translate(-50%, -50%);
     border: 5px solid #090b6e;
     padding: 10px;
+    border-radius: 5rem;
+    box-shadow:  5px 5px 8px #08067c;
     
 }
 

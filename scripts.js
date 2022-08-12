@@ -23,10 +23,29 @@ var pipeTile16 = document.getElementById("tileNo_16")
 
 function north1Click(){
    var pipeOne = document.getElementById("img1").src
+   var pipeTwo = document.getElementById("img2").src
+   var pipeThree = document.getElementById("img3").src
+   var pipeFour = document.getElementById("img4").src
    var pipeFive = document.getElementById("img5").src
+   var pipeSix = document.getElementById("img6").src
+   var pipeSeven = document.getElementById("img7").src
+   var pipeEight = document.getElementById("img8").src
    var pipeNine = document.getElementById("img9").src
+   var pipeTen = document.getElementById("img10").src
+   var pipeEleven = document.getElementById("img11").src
+   var pipeTwelve = document.getElementById("img12").src
    var pipeThirteen = document.getElementById("img13").src
-   
+   var pipeFourteen = document.getElementById("img14").src
+   var pipeFifteen = document.getElementById("img15").src
+   var pipeSixteen = document.getElementById("img16").src
+
+
+   var col1 = [pipeTile1, pipeTile5, pipeTile9, pipeTile13]
+
+   col1.unshift(col1.pop);
+   console.log(col1)
+
+
    document.getElementById("img1").src=pipeThirteen
    document.getElementById("img5").src=pipeOne
    document.getElementById("img9").src=pipeFive
@@ -45,3 +64,25 @@ document.getElementById("buttonN1").addEventListener("click", north1Click)
 document.addEventListener("DOMContentLoaded", function() { 
     eventListeners();
 });
+
+
+
+
+
+
+/* 
+working function for a single button click
+
+function north1Click(){
+    var pipeOne = document.getElementById("img1").src
+    var pipeFive = document.getElementById("img5").src
+    var pipeNine = document.getElementById("img9").src
+    var pipeThirteen = document.getElementById("img13").src
+    
+    document.getElementById("img1").src=pipeThirteen
+    document.getElementById("img5").src=pipeOne
+    document.getElementById("img9").src=pipeFive
+    document.getElementById("img13").src=pipeNine
+ 
+ }
+ */
