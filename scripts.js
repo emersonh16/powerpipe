@@ -33,6 +33,27 @@ var pipeTile15 = document.getElementById("tileNo_15")
 var pipeTile16 = document.getElementById("tileNo_16")
 
 
+function assignTerminals() {
+    function getRandomInt(max) {
+        return Math.ceil(Math.random() * max);
+      }
+
+      var a = getRandomInt(16)
+      var b = getRandomInt(16)
+
+      if (a != b){
+    
+        document.getElementById("term"+a).style.backgroundColor = "#00FF00";
+        document.getElementById("term"+b).style.backgroundColor = "#00FF00";
+      
+      }
+      else {
+        assignTerminals
+      }
+
+}
+
+
 function north1Click(){
    var pipeOne = document.getElementById("img1").src
    var pipeFive = document.getElementById("img5").src
@@ -250,6 +271,7 @@ document.getElementById("buttonE4").addEventListener("click", east4Click)
 // Wait until the document is ready
 document.addEventListener("DOMContentLoaded", function() { 
     eventListeners();
+    assignTerminals();
 });
 
 
