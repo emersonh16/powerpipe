@@ -1,36 +1,35 @@
-const north1Button = document.getElementById("buttonN1")
-const north2Button = document.getElementById("buttonN2")
-const north3Button = document.getElementById("buttonN3")
-const north4Button = document.getElementById("buttonN4")
-const south1Button = document.getElementById("buttonS1")
-const south2Button = document.getElementById("buttonS2")
-const south3Button = document.getElementById("buttonS3")
-const south4Button = document.getElementById("buttonS4")
-const west1Button = document.getElementById("buttonW1")
-const west2Button = document.getElementById("buttonW2")
-const west3Button = document.getElementById("buttonW3")
-const west4Button = document.getElementById("buttonW4")
-const east1Button = document.getElementById("buttonE1")
-const east2Button = document.getElementById("buttonE2")
-const east3Button = document.getElementById("buttonE3")
-const east4Button = document.getElementById("buttonE4")
+var bottom_left = document.createElement("img");
+bottom_left.src = "./images/Green Pipes/Bottom-Left.png";
 
-var pipeTile1 = document.getElementById("tileNo_1")
-var pipeTile2 = document.getElementById("tileNo_2")
-var pipeTile3 = document.getElementById("tileNo_3")
-var pipeTile4 = document.getElementById("tileNo_4")
-var pipeTile5 = document.getElementById("tileNo_5")
-var pipeTile6 = document.getElementById("tileNo_6")
-var pipeTile7 = document.getElementById("tileNo_7")
-var pipeTile8 = document.getElementById("tileNo_8")
-var pipeTile9 = document.getElementById("tileNo_9")
-var pipeTile10 = document.getElementById("tileNo_10")
-var pipeTile11 = document.getElementById("tileNo_11")
-var pipeTile12 = document.getElementById("tileNo_12")
-var pipeTile13 = document.getElementById("tileNo_13")
-var pipeTile14 = document.getElementById("tileNo_14")
-var pipeTile15 = document.getElementById("tileNo_15")
-var pipeTile16 = document.getElementById("tileNo_16")
+var left_right = document.createElement("img");
+left_right.src = "./images/Green Pipes/Left-Right.png";
+
+var left_top = document.createElement("img");
+left_top.src = "images/Green Pipes/Left-Top.png";
+
+var right_bottom = document.createElement("img");
+right_bottom.src = "images/Green Pipes/Right-Bottom.png";
+
+var top_bottom = document.createElement("img");
+top_bottom.src = "images/Green Pipes/Top-Bottom.png";
+
+var top_right = document.createElement("img");
+top_right.src = "images/Green Pipes/Top-Right.png";
+
+
+
+function assignPipes() {
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+      }
+
+      possiblePipes = [bottom_left, left_right, left_top, right_bottom, top_bottom, top_right];
+
+      for (let i=1; i <=16; i++) {
+        document.getElementById("img"+i).src = possiblePipes[getRandomInt(6)].src
+      } 
+
+}
 
 
 function assignTerminals() {
@@ -48,7 +47,7 @@ function assignTerminals() {
       
       }
       else {
-        assignTerminals
+        assignTerminals()
       }
 
 }
@@ -272,6 +271,7 @@ document.getElementById("buttonE4").addEventListener("click", east4Click)
 document.addEventListener("DOMContentLoaded", function() { 
     eventListeners();
     assignTerminals();
+    assignPipes();
 });
 
 
